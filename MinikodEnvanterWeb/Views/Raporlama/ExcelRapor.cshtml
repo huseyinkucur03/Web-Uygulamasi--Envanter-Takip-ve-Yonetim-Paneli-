@@ -1,0 +1,19 @@
+﻿@{
+	ViewData["Title"] = "Excel Rapor";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-center mb-4">@ViewData["Title"]</h1>
+
+@if (TempData["HataMesaji"] != null)
+{
+	<div class="alert alert-danger">
+		@TempData["HataMesaji"]
+	</div>
+}
+<div class="container-fluid">
+	<form method="post" action="@Url.Action("ExcelRapor", "Raporlama")">
+		<input type="text" name="fileName" placeholder="Dosya adı girin" />
+		<button type="submit" class="btn btn-primary">Excel'e Aktar</button>
+	</form>
+</div>

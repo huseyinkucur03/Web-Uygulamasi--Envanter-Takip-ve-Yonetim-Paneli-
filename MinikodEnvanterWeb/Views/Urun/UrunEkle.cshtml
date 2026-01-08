@@ -1,0 +1,111 @@
+﻿@{
+	ViewData["Title"] = "Ürün Ekle";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-center mb-4">@ViewData["Title"]</h1>
+
+@model Urunler
+
+<div class="container">
+	<div class="card mb-4">
+		<div class="card-header bg-primary text-white">
+			Ürün Bilgileri
+		</div>
+		<div class="card-body">
+			<form asp-controller="Urun" asp-action="UrunEkle" method="post" enctype="multipart/form-data">
+				<div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group mb-3">
+							<label asp-for="UrunAdi" class="control-label">Ürün Adı</label>
+							<input asp-for="UrunAdi" class="form-control" />
+							<span asp-validation-for="UrunAdi" class="text-danger"></span>
+						</div>
+
+						<div class="form-group mb-3">
+							<label asp-for="KategoriID" class="control-label">Kategoriler</label>
+							<div class="d-flex align-items-center">
+								<select asp-for="KategoriID" class="form-control me-3" asp-items="ViewBag.Kategoriler" style="width:60%">
+									<option value="">Seçiniz...</option>
+									<option value="0">Diğer</option> <!-- Diğer seçeneği -->
+								</select>
+								<input type="text" id="DigerKategori" name="DigerKategori" class="form-control" placeholder="Diğer Kategori" style="width:40%;" />
+							</div>
+							<span asp-validation-for="KategoriID" class="text-danger"></span>
+						</div>
+
+						<div class="form-group mb-3">
+							<label asp-for="MarkaID" class="control-label">Markalar</label>
+							<div class="d-flex align-items-center">
+								<select asp-for="MarkaID" class="form-control me-3" asp-items="ViewBag.Markalar" style="width:60%">
+									<option value="">Seçiniz...</option>
+									<option value="0">Diğer</option> <!-- Diğer seçeneği -->
+								</select>
+								<input type="text" id="DigerMarka" name="DigerMarka" class="form-control" placeholder="Diğer Marka" style="width:40%;" />
+							</div>
+							<span asp-validation-for="MarkaID" class="text-danger"></span>
+						</div>
+
+						<div class="form-group mb-3">
+							<label asp-for="Aciklama" class="control-label">Özellikler</label>
+							<input asp-for="Aciklama" class="form-control" />
+							<span asp-validation-for="Aciklama" class="text-danger"></span>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group mb-3">
+							<label asp-for="ToplamSayi" class="control-label">Ürün Sayısı</label>
+							<input asp-for="ToplamSayi" class="form-control" />
+							<span asp-validation-for="ToplamSayi" class="text-danger"></span>
+						</div>
+
+						<div class="form-group mb-3">
+							<label asp-for="CalismayanSayisi" class="control-label">Çalışmayan Ürün Sayısı</label>
+							<input asp-for="CalismayanSayisi" class="form-control" />
+							<span asp-validation-for="CalismayanSayisi" class="text-danger"></span>
+						</div>
+
+						<div class="form-group mb-3">
+							<label asp-for="CalismamaNedeni" class="control-label">Çalışmama Nedeni</label>
+							<input asp-for="CalismamaNedeni" class="form-control" />
+							<span asp-validation-for="CalismamaNedeni" class="text-danger"></span>
+						</div>
+
+						<div class="form-group mb-3">
+							<label>Görsel Yükle:</label>
+							<input type="file" name="Resim" class="form-control" />
+						</div>
+					</div>
+				</div>
+				<div class="text-center">
+					<button type="submit" class="btn btn-success">Kaydet</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="card-header bg-primary text-white">
+			Excel Dosyası Yükle
+		</div>
+		<div class="card-body">
+			<form asp-action="ExcelYukle" asp-controller="Urun" enctype="multipart/form-data" method="post">
+				<div class="form-group mb-3">
+					<label>Excel Dosyası Yükle:</label>
+					<input type="file" name="excelFile" class="form-control" />
+				</div>
+				@if (TempData["ExcelDosyaHatasi"] != null)
+				{
+					<div class="alert alert-danger">
+						@TempData["ExcelDosyaHatasi"]
+					</div>
+						
+				}
+				<div class="text-center">
+					<button type="submit" class="btn btn-primary">Yükle</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

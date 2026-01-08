@@ -1,0 +1,60 @@
+﻿@{
+	ViewData["Title"] = "Kullanicilar";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model List<Kullanicilar>
+
+<h1 style="text-align:center">Kullanıcılar</h1>
+
+@if (TempData["SuccessMessage"] != null)
+{
+	<div class="alert alert-success">
+		@TempData["SuccessMessage"]
+	</div>
+}
+
+<div class="container-fluid table-responsive">
+	<table class="table table-bordered table-striped text-center mt-0" id="datatablesSimple">
+		<thead>
+			@if (TempData["Kayit"] != null)
+			{
+				<div class="alert alert-success">
+					@TempData["Kayit"]
+				</div>
+			}
+			<tr>
+				<th>Ad</th>
+				<th>Soyad</th>
+				<th>Kullanıcı Adı</th>
+				<th>E-Posta</th>
+				<th>Telefon Numarası</th>
+				<th>Adres</th>
+				<th>Güncelle</th>
+				<th>Sil</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var kullanici in Model)
+			{
+				<tr>
+					<td>@kullanici.Ad</td>
+					<td>@kullanici.Soyad</td>
+					<td>@kullanici.KullaniciAdi</td>
+					<td>@kullanici.Eposta</td>
+					<td>@kullanici.TelNo</td>
+					<td>@kullanici.Adres</td>
+					<td>
+						<a asp-controller="Kullanici" asp-action="KullaniciGuncelle" asp-route-id="@kullanici.KullaniciID" class="btn btn-outline-warning">Güncelle</a>
+					</td>
+					<td>
+						<a asp-controller="Kullanici" asp-action="KullaniciSil" asp-route-id="@kullanici.KullaniciID" class="btn btn-outline-danger"
+						   onclick="return confirm('Bu ürünü silmek istediğinizden emin misiniz?');">
+							Sil
+						</a>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>

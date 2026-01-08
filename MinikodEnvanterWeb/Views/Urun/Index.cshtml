@@ -1,0 +1,129 @@
+﻿@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 style="text-align:center">Ürünler</h1>
+
+@model List<Urunler>
+<style>
+	.foto {
+		transition: 0.8s;
+		border-radius: 8px;
+	}
+
+		.foto:hover {
+			transform: scale(3);
+		}
+</style>
+
+@using (Html.BeginForm("Index", "Urun", FormMethod.Get))
+{
+	<div class="container-fluid">
+		<div class="row" style="margin-top:20px">
+			<div class="col-md-3">
+				<select name="markaId" class="form-control">
+					<option value="">Marka Seçin</option>
+					@foreach (var marka in ViewBag.Markalar)
+					{
+						<option value="@marka.Value" selected="@(ViewContext.HttpContext.Request.Query["markaId"] == marka.Value)">
+							@marka.Text
+						</option>
+					}
+				</select>
+			</div>
+			<div class="col-md-3">
+				<select name="kategoriId" class="form-control">
+					<option value="">Kategori Seçin</option>
+					@foreach (var kategori in ViewBag.Kategoriler)
+					{
+						<option value="@kategori.Value" selected="@(ViewContext.HttpContext.Request.Query["kategoriId"] == kategori.Value)">
+							@kategori.Text
+						</option>
+					}
+				</select>
+			</div>
+			<div class="col-md-3">
+				<button type="submit" class="btn btn-primary">Filtrele</button>
+			</div>
+		</div>
+	</div>
+}
+
+<div style="margin-left: 20px; margin-top: 20px;">
+	<h6>
+		Görüntülenen Ürün Sayısı : @Model.Count
+	</h6>
+</div>
+
+@if (TempData["BasariylaEklendi"] != null)
+{
+	<div class="alert alert-success">
+		@TempData["BasariylaEklendi"]
+	</div>
+}
+
+<div class="container-fluid table-responsive">
+	<table class="table table-bordered table-striped text-center mt-0" id="datatablesSimple">
+		<thead>
+			<tr>
+				<th>Ürün Adı</th>
+				<th>Kategori</th>
+				<th>Marka</th>
+				<th>Özellikler</th>
+				<th>Ürün Görseli</th>
+				<th>Toplam Adet</th>
+				<th>Bozuk Ürün Sayısı</th>
+				<th>Çalışmama Nedeni</th>
+				<th>Eklenme Tarihi</th>
+				<th>Son Değistirilme Tarihi</th>
+				@if (ViewBag.AdresBossMu == true)
+				{
+					<th>Adres</th>
+				}
+				@if (ViewBag.AdresBossMu == true)
+				{
+					<th>Kaydı Yapan Kullanıcı</th>
+				}
+				<th>Düzenle</th>
+				<th>Sil</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var urun in Model)
+			{
+				<tr>
+					<td>@urun.UrunAdi</td>
+					<td>@urun.Kategoriler.KategoriAdi</td>
+					<td>@urun.Markalar.MarkaAdi</td>
+					<td>@urun.Aciklama</td>
+					<td>
+						<img class="foto" src="@urun.Resim" alt="" style="width: 100px; height: auto;" />
+					</td>
+					<td>@urun.ToplamSayi</td>
+					<td>@urun.CalismayanSayisi</td>
+					<td>@urun.CalismamaNedeni</td>
+					<td>@urun.EklenmeTarihi</td>
+					<td>@urun.SonDegistirilmeTarihi</td>
+					@if (ViewBag.AdresBossMu == true)
+					{
+						<td>@urun.Adres</td>
+					}
+					@if (ViewBag.AdresBossMu == true)
+					{
+						<td>@urun.KullaniciAdi</td>
+					}
+					<td>
+						<a asp-controller="Urun" asp-action="UrunGuncelle" asp-route-id="@urun.UrunID" class="btn btn-outline-warning">Güncelle</a>
+					</td>
+					<td>
+						<a asp-controller="Urun" asp-action="UrunSil" asp-route-id="@urun.UrunID" class="btn btn-outline-danger"
+						   onclick="return confirm('Bu ürünü silmek istediğinizden emin misiniz?');">
+							Sil
+						</a>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>

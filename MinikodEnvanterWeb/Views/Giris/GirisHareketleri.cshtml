@@ -1,0 +1,30 @@
+﻿@{
+	ViewData["Title"] = "GirisHareketleri";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model List<GirisHareketleri>
+
+<h1 style="text-align:center">Giriş Hareketleri</h1>
+
+<div class="container-fluid table-responsive">
+	<table class="table table-bordered table-striped text-center mt-0" id="datatablesSimple">
+		<thead>
+			<tr>
+				<th>Kullanıcı Adı</th>
+				<th>Giriş Tarihi</th>
+				<th>Adres</th>
+
+		</thead>
+		<tbody>
+			@foreach (var giris in Model)
+			{
+				<tr>
+					<td>@giris.KullaniciAdi</td>
+					<td>@giris.GirisTarihi</td>
+					<td>@giris.Adres</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>

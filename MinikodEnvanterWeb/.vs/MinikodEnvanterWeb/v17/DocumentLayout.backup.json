@@ -1,0 +1,107 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\H\u00FCseyin\\Desktop\\ders notlar\u0131\\MinikodEnvanterWeb\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E3FAFD6B-7513-41B5-9A79-83083B110CF5}|MinikodEnvanterWeb.csproj|c:\\users\\h\u00FCseyin\\desktop\\ders notlar\u0131\\minikodenvanterweb\\wwwroot\\startbootstrap-sb-admin-master\\dist\\js\\scripts.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E3FAFD6B-7513-41B5-9A79-83083B110CF5}|MinikodEnvanterWeb.csproj|solutionrelative:wwwroot\\startbootstrap-sb-admin-master\\dist\\js\\scripts.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3FAFD6B-7513-41B5-9A79-83083B110CF5}|MinikodEnvanterWeb.csproj|c:\\users\\h\u00FCseyin\\desktop\\ders notlar\u0131\\minikodenvanterweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E3FAFD6B-7513-41B5-9A79-83083B110CF5}|MinikodEnvanterWeb.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3FAFD6B-7513-41B5-9A79-83083B110CF5}|MinikodEnvanterWeb.csproj|c:\\users\\h\u00FCseyin\\desktop\\ders notlar\u0131\\minikodenvanterweb\\views\\urun\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E3FAFD6B-7513-41B5-9A79-83083B110CF5}|MinikodEnvanterWeb.csproj|solutionrelative:views\\urun\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3FAFD6B-7513-41B5-9A79-83083B110CF5}|MinikodEnvanterWeb.csproj|c:\\users\\h\u00FCseyin\\desktop\\ders notlar\u0131\\minikodenvanterweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E3FAFD6B-7513-41B5-9A79-83083B110CF5}|MinikodEnvanterWeb.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3FAFD6B-7513-41B5-9A79-83083B110CF5}|MinikodEnvanterWeb.csproj|c:\\users\\h\u00FCseyin\\desktop\\ders notlar\u0131\\minikodenvanterweb\\views\\giris\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E3FAFD6B-7513-41B5-9A79-83083B110CF5}|MinikodEnvanterWeb.csproj|solutionrelative:views\\giris\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "scripts.js",
+              "DocumentMoniker": "C:\\Users\\H\u00FCseyin\\Desktop\\ders notlar\u0131\\MinikodEnvanterWeb\\wwwroot\\startbootstrap-sb-admin-master\\dist\\js\\scripts.js",
+              "RelativeDocumentMoniker": "wwwroot\\startbootstrap-sb-admin-master\\dist\\js\\scripts.js",
+              "ToolTip": "C:\\Users\\H\u00FCseyin\\Desktop\\ders notlar\u0131\\MinikodEnvanterWeb\\wwwroot\\startbootstrap-sb-admin-master\\dist\\js\\scripts.js",
+              "RelativeToolTip": "wwwroot\\startbootstrap-sb-admin-master\\dist\\js\\scripts.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-07-02T14:21:07.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\H\u00FCseyin\\Desktop\\ders notlar\u0131\\MinikodEnvanterWeb\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\H\u00FCseyin\\Desktop\\ders notlar\u0131\\MinikodEnvanterWeb\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAACUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-21T09:30:17.716Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\H\u00FCseyin\\Desktop\\ders notlar\u0131\\MinikodEnvanterWeb\\Views\\Urun\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Urun\\Index.cshtml",
+              "ToolTip": "C:\\Users\\H\u00FCseyin\\Desktop\\ders notlar\u0131\\MinikodEnvanterWeb\\Views\\Urun\\Index.cshtml",
+              "RelativeToolTip": "Views\\Urun\\Index.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-28T22:38:11.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\H\u00FCseyin\\Desktop\\ders notlar\u0131\\MinikodEnvanterWeb\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\H\u00FCseyin\\Desktop\\ders notlar\u0131\\MinikodEnvanterWeb\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAIwG8AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-28T22:44:49.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\H\u00FCseyin\\Desktop\\ders notlar\u0131\\MinikodEnvanterWeb\\Views\\Giris\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Giris\\Login.cshtml",
+              "ToolTip": "C:\\Users\\H\u00FCseyin\\Desktop\\ders notlar\u0131\\MinikodEnvanterWeb\\Views\\Giris\\Login.cshtml",
+              "RelativeToolTip": "Views\\Giris\\Login.cshtml",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAowCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-28T21:19:16.171Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
